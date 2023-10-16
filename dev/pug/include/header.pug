@@ -1,0 +1,375 @@
+
+header.header.sticky-header
+	.header-top.container
+		.header-top_link(data-aos="fade-down" data-aos-duration="1000")
+			ul
+				li
+					a(href="https://www.google.com/maps/search/Japan+Osaka,+Sakai+2-2-11/@34.5759702,135.4433409,14z" target="_blank")
+						img(src="/asset/img/icon-pin.png" alt="" class="icon-image")
+						span.only-desktop Japan Osaka, Sakai 2-2-11
+				li
+					a(href="tel:+628062392324")
+						img(src="/asset/img/icon-phone.png" alt="" class="icon-image")
+						span.only-desktop 080-6239-2324
+				li
+					a(href="about.html")
+						img(src="/asset/img/icon-people.png" alt="" class="icon-image")
+						span.only-desktop About
+				
+		.header-top_right(data-aos="fade-down" data-aos-duration="1000")
+			ul
+				li
+					.btn-group.dropleft
+						a(href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							img(src="/asset/img/icon-lang.png" alt="" class="icon-image")
+							|English
+						.dropdown-menu
+							a(class="dropdown-item" href="#") Bahasa
+							a(class="dropdown-item" href="#") English
+				li
+					a(href="javascript:;" class="trigger-search")
+						img(src="/asset/img/icon-search.png" alt="" class="icon-image")
+		
+	.header-menu(data-aos="fade-down" data-aos-duration="500" data-aos-delay="200")
+		.container
+			.header-menu_logo(data-aos="zoom-in" data-aos-duration="1000")
+				a(href="index.html")
+					img(src="/asset/img/logo-met-white.png" alt="")
+			.header-menu-list
+				nav.navbar.navbar-expand-xl
+					//- button.navbar-toggler(type="button" data-toggle="collapse" data-target="#main_nav")
+					//- 	i.fa.fa-bars(aria-hidden="true")						
+
+					a.navbar-toggler(href="#menuMobile")
+						i.fa.fa-bars(aria-hidden="true")
+
+					.collapse.navbar-collapse#main_nav
+						ul.navbar-nav.main-menu
+							li.nav-item.dropdown
+								a.nav-link(href="javascript:;")
+									|Destinations
+								ul.dropdown-menu
+									li.has-child
+										a.dropdown-item(href="#") Region of Japan
+										ul.submenu.dropdown-menu
+											li.has-child
+												a.dropdown-item(href="region-eastjapan.html") East Japan
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Hokkaido
+													li
+														a.dropdown-item(href="region-eastjapan-tohoku.html") Tohoku
+													li
+														a.dropdown-item(href="#") Kanto
+													li
+														a.dropdown-item(href="#") Chubu
+											li.has-child
+												a.dropdown-item(href="#") West Japan
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Kansai
+													li
+														a.dropdown-item(href="#") Chugoku
+													li
+														a.dropdown-item(href="#") Shikoku
+													li
+														a.dropdown-item(href="#") Kyushu & Okinawa
+									li.has-child
+										a.dropdown-item(href="#") Prefectures
+										ul.submenu.dropdown-menu
+											li.has-child
+												a.dropdown-item(href="#") Hokkaido
+												ul.submenu.dropdown-menu
+													li 
+														a.dropdown-item(href="#") Hokkaido
+											li.has-child
+												a.dropdown-item(href="region-eastjapan-tohoku.html") Tohoku
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="region-eastjapan-tohoku-aomori.html") Aomori
+													li
+														a.dropdown-item(href="#") Iwate
+													li
+														a.dropdown-item(href="#") Miyagi
+													li
+														a.dropdown-item(href="#") Akita
+													li
+														a.dropdown-item(href="#") Yamagata
+													li
+														a.dropdown-item(href="#") Fukushima
+											li.has-child
+												a.dropdown-item(href="#") Kanto
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Ibaraki
+													li
+														a.dropdown-item(href="#") Tochigi
+													li
+														a.dropdown-item(href="#") Gunma
+													li
+														a.dropdown-item(href="#") Saitama
+													li
+														a.dropdown-item(href="#") Chiba
+													li
+														a.dropdown-item(href="#") Tokyo
+													li
+														a.dropdown-item(href="#") Kanagawa
+											li.has-child
+												a.dropdown-item(href="#") Chubu
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Nigata
+													li
+														a.dropdown-item(href="#") Toyoma
+													li
+														a.dropdown-item(href="#") Ishikawa
+													li
+														a.dropdown-item(href="#") Fukui
+													li
+														a.dropdown-item(href="#") Yamanashi
+													li
+														a.dropdown-item(href="#") Nagano
+													li
+														a.dropdown-item(href="#") Gifu
+													li
+														a.dropdown-item(href="#") Shizuoka
+													li
+														a.dropdown-item(href="#") Aichi
+											li.has-child
+												a.dropdown-item(href="#") Kansai
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Mie
+													li
+														a.dropdown-item(href="#") Shiga
+													li
+														a.dropdown-item(href="#") Kyoto
+													li
+														a.dropdown-item(href="#") Osaka
+													li
+														a.dropdown-item(href="#") Hyogo
+													li
+														a.dropdown-item(href="#") Nara
+													li
+														a.dropdown-item(href="#") Wakayama
+											li.has-child
+												a.dropdown-item(href="#") Chugoku
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Tottori
+													li
+														a.dropdown-item(href="#") Shimane
+													li
+														a.dropdown-item(href="#") Okayama
+													li
+														a.dropdown-item(href="#") Hiroshima
+													li
+														a.dropdown-item(href="#") Yamaguchi
+											li.has-child
+												a.dropdown-item(href="#") Shikoku
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Tokushima
+													li
+														a.dropdown-item(href="#") Kagawa
+													li
+														a.dropdown-item(href="#") Ehime
+													li
+														a.dropdown-item(href="#") Kochi
+											li.has-child
+												a.dropdown-item(href="#") Kyushu & Okinawa
+												ul.submenu.dropdown-menu
+													li
+														a.dropdown-item(href="#") Fukuoka
+													li
+														a.dropdown-item(href="#") Saga
+													li
+														a.dropdown-item(href="#") Nagasaki
+													li
+														a.dropdown-item(href="#") Kumamoto
+													li
+														a.dropdown-item(href="#") Oita
+													li
+														a.dropdown-item(href="#") Miyazaki
+													li
+														a.dropdown-item(href="#") Kagoshima
+													li
+														a.dropdown-item(href="#") Okinawa
+													
+							li.nav-item.dropdown
+								a.nav-link(href="interest.html") Interest
+								ul.dropdown-menu
+									li.has-child
+										a.dropdown-item(href="#") History and Religion
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="temple.html") Temples
+											li
+												a.dropdown-item(href="#") Shrines
+											li
+												a.dropdown-item(href="#") Castles
+											li
+												a.dropdown-item(href="#") World Heritages
+									li.has-child
+										a.dropdown-item(href="#") Art Tradition and Culture
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Arts and Crafts
+											li
+												a.dropdown-item(href="#") Gardens
+											li
+												a.dropdown-item(href="#") Festivals
+											li
+												a.dropdown-item(href="#") Agriculture
+									li.has-child
+										a.dropdown-item(href="#") Nature and Outdoors
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Onsens & SPA
+											li
+												a.dropdown-item(href="#") Hiking
+											li
+												a.dropdown-item(href="#") Skiing and Snowboarding
+											li
+												a.dropdown-item(href="#") Cycling
+											li
+												a.dropdown-item(href="#") Volcanoes
+											li
+												a.dropdown-item(href="#") Nature
+											li
+												a.dropdown-item(href="#") Flowers
+											li
+												a.dropdown-item(href="#") Parks
+									li.has-child
+										a.dropdown-item(href="#") Food and Entertainment
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Food and Drinks
+											li
+												a.dropdown-item(href="#") Shopping
+											li
+												a.dropdown-item(href="#") Amusement Parks
+
+							li.nav-item.dropdown
+								a.nav-link(href="#") Reservation
+								
+								ul.dropdown-menu
+									li.has-child
+										a.dropdown-item(href="#") Reservation
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Tailor Made Trips
+											li
+												a.dropdown-item(href="#") Package Tour
+											li
+												a.dropdown-item(href="#") Coorporate and Team Building
+									li.has-child
+										a.dropdown-item(href="#") Special Occasion
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Wedding Anniversary
+											li
+												a.dropdown-item(href="#") Honeymoon
+											li
+												a.dropdown-item(href="#") Proposal Engagement
+											li
+												a.dropdown-item(href="#") Mother Day
+											li
+												a.dropdown-item(href="#") Father Day
+											li
+												a.dropdown-item(href="#") Birthday Celebration
+											li
+												a.dropdown-item(href="#") Wellness
+
+							li.nav-item.dropdown
+								a.nav-link(href="#") Categories
+								
+								ul.dropdown-menu
+									li
+										a.dropdown-item(href="#") Gourmet
+									li
+										a.dropdown-item(href="#") Outdoor
+									li
+										a.dropdown-item(href="#") Theme
+									li
+										a.dropdown-item(href="#") Experience
+									li
+										a.dropdown-item(href="#") Hobbies
+									li
+										a.dropdown-item(href="#") Night Life
+									li
+										a.dropdown-item(href="#") Muslim
+									li
+										a.dropdown-item(href="#") Beauty
+
+							li.nav-item.dropdown
+								a.nav-link(href="#") Transportation
+								
+								ul.dropdown-menu
+									li.has-child
+										a.dropdown-item(href="#") Roadways
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Car
+											li
+												a.dropdown-item(href="#") Bus
+											li
+												a.dropdown-item(href="#") Taxi
+									li.has-child
+										a.dropdown-item(href="#") Railways
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Bullet Train
+											li
+												a.dropdown-item(href="#") Shinkansen Train
+											li
+												a.dropdown-item(href="#") Character Train
+											li
+												a.dropdown-item(href="#") Seasonal Train
+									li.has-child
+										a.dropdown-item(href="#") Waterways
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Ferry
+											li
+												a.dropdown-item(href="#") Boat
+									li.has-child
+										a.dropdown-item(href="#") Airways
+										ul.submenu.dropdown-menu
+											li
+												a.dropdown-item(href="#") Helicopter
+											li
+												a.dropdown-item(href="#") Aeroplanes
+
+							li.nav-item.dropdown
+								a.nav-link(href="#") Season Highlight
+								ul.dropdown-menu
+									li
+										a.dropdown-item(href="#") Winter
+									li
+										a.dropdown-item(href="#") Spring
+									li
+										a.dropdown-item(href="#") Summer
+									li
+										a.dropdown-item(href="#") Autumn
+
+							li.nav-item.dropdown
+								a.nav-link(href="#") Styles
+								ul.dropdown-menu
+									li
+										a.dropdown-item(href="#") Premium
+									li
+										a.dropdown-item(href="#") Comfort
+									li
+										a.dropdown-item(href="#") Original
+									li
+										a.dropdown-item(href="#") Basic
+									li
+										a.dropdown-item(href="#") Safe Travel
+
+	.search-top-container.container
+		form(action="#")
+			.input-group.mb-3
+				input(type="text" class="form-control" placeholder="Enter keywords & hit Enter")
+				.input-group-append
+					a.btn.btn-primary.close-search(href="javascript:;") X

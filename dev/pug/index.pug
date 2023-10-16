@@ -1,0 +1,24 @@
+- var title = "Maya Elite Tour"
+- var page = "homepage"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				include ./component/section-home-hero.pug
+				include ./component/section-home-welcome.pug
+				include ./component/section-home-area.pug
+				include ./component/section-home-why.pug
+				include ./component/section-home-recommended.pug
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

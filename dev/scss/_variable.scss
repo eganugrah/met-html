@@ -1,0 +1,25 @@
+$colorMain: #A37E2C;
+$colorMainDark: darken($colorMain, 10%);
+$colorMainLight: lighten($colorMain, 10%);
+$colorSecondary: #E3D8BF;
+$colorGray: #7C786E;
+$colorText: $colorGray;
+$colorLink: #A37E2C;
+
+$buttonSecondary: $colorGray;
+$buttonSecondaryDark: darken($buttonSecondary, 10%);
+$buttonSecondaryLight: lighten($buttonSecondary, 10%);
+
+$black: #222;
+$grayLight: #FDFCF8;
+$grayLightDark: darken($grayLight, 10%);
+$borderInput: #ced4da;
+
+$fontMiller: 'miller';
+$fontBack: 'back_to_black';
+$fontMontReg: 'montserrat-regular';
+$fontMontMed: 'montserrat-medium';
+$fontMontSemiBold: 'montserrat-semibold';
+$fontMontBold: 'montserrat-bold';
+$fontMontBlack: 'montserrat-black';
+

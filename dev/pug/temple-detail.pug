@@ -1,0 +1,69 @@
+- var title = "Hase-dera - Temple - Interest - Maya Elite Tour"
+- var page = "level3page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header.medium
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-6.png);")
+						//- img(src="asset/img/page-banner-6.png" alt="")
+
+				section.section.no-divider.pt-0(data-aos="fade-up" data-aos-duration="500")
+					.container
+						
+						.section-content
+							div(data-aos="fade-up" data-aos-duration="1000")
+								h3.text-center.mb-4 Hase-dera (Kamakura)
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+							.grids 
+								.grid 
+									a.grid-image.image-popup(href="asset/img/bg-parallax.png")
+										img(src="asset/img/bg-parallax.png", alt="")
+								.grid 
+									a.grid-image.image-popup(href="asset/img/page-banner-4.png")
+										img(src="asset/img/page-banner-4.png", alt="")
+								.grid 
+									a.grid-image.image-popup(href="asset/img/page-banner-6.png")
+										img(src="asset/img/page-banner-6.png", alt="")
+								.grid 
+									a.grid-image.image-popup(href="asset/img/page-banner-5.png")
+										img(src="asset/img/page-banner-5.png", alt="")
+								.grid 
+									a.grid-image.image-popup(href="asset/img/page-banner-2.png")
+										img(src="asset/img/page-banner-2.png", alt="")
+
+
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

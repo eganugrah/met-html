@@ -1,0 +1,115 @@
+- var title = "Contact Us - Maya Elite Tour"
+- var page = "level1page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header.medium
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-1.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-2.png" alt="")
+
+				section.section.section-welcome.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.row
+							.col-md-6
+								.block-page-title
+									h1.h1-medium
+										span CONTACT 
+										span US 
+							.col-md-6
+								ul.section-image
+									li(data-aos="fade-up" data-aos-delay="100" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-1.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="400" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-2.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="800" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-3.png" alt="")
+						
+						.section-content
+							div(data-aos="fade-up" data-aos-duration="1000")
+								h4.text-center.mb-4 GET IN TOUCH WITH US QUICKLY AND EASILY HERE
+								.row 
+									.col-lg-4.col-md-6 
+										.card.card-custom.text-center
+											.card-image.auto-img 
+												img(src="asset/img/icon-pin-2.png", alt="")
+											.card-body
+												.card-p 
+													|Japan Osaka, Sakai 2-2-11
+													br
+													a(href="https://www.google.com/maps/search/Japan+Osaka,+Sakai+2-2-11/@34.5759702,135.4433409,14z" target="_blank")
+														b Get Direction
+									.col-lg-4.col-md-6 
+										.card.card-custom.text-center
+											.card-image.auto-img
+												img(src="asset/img/icon-tablet.png", alt="")
+											.card-body
+												.card-p 
+													|We'll help advise you by phone!
+													br
+													a(href="tel:+628062392324")
+														b 080-6293-2324
+									.col-lg-4.col-md-12 
+										.card.card-custom.text-center
+											.card-image.auto-img
+												img(src="asset/img/icon-envelope.png", alt="")
+											.card-body
+												.card-p 
+													|Very welcome to send an email
+													br
+													a(href="mailto:info@mayaelitetour.com")
+														b info@mayaelitetour.com
+
+				section.section.section-form(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content
+							.row
+								.col-lg-5
+									h3 Your dream travel destination was not include?
+									p.h5.mt-3.mb-3
+										b No problem!
+										br
+										|Just have a look at our other destinations, or send us a message – we would be happy to advise you on your search.
+								.col-lg-7
+									form(action="#")
+										.form-group
+											input(type="text", name="contact_fullname", placeholder="Full Name").form-control
+										.row
+											.col-md-6
+												.form-group
+													input(type="text", name="contact_phone", placeholder="Phone").form-control
+											.col-md-6
+												.form-group
+													input(type="text", name="contact_email", placeholder="Email").form-control
+										.form-group
+											input(type="text", name="contact_address", placeholder="Address").form-control
+										.form-group
+											textarea(name="contact_us", rows="10", placeholder="Hello, kindly leave a message for us to discover more destination.").form-control
+										.row
+											.col-md-6
+												.form-group
+													input(type="checkbox", name="contact_agree", id="contact_agree").styled-checkbox
+													label.form-check-label(for="contact_agree")
+														|I have read the 
+														a(href="#" target="_blank") privacy policy
+											.col-md-6
+												.form-group.text-right
+													button(type="submit").btn-icon-animated.block-mobile 
+														span.btn-icon-animated__circle
+															span.btn-icon-animated__icon
+																i.fa.fa-chevron-right
+														span.btn-icon-animated__text Send
+
+				include ./component/section-home-faq.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

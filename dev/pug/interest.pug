@@ -1,0 +1,158 @@
+- var title = "Interest - Maya Elite Tour"
+- var page = "level1page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-2.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-2.png" alt="")
+
+				section.section.section-welcome.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.row
+							.col-md-6
+								.block-page-title
+									h1.h1-medium
+										span EXPLORE 
+										span YOUR 
+										span INTEREST
+							.col-md-6
+								ul.section-image
+									li(data-aos="fade-up" data-aos-delay="100" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-1.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="400" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-2.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="800" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-3.png" alt="")
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center HISTORY & RELIGION
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Temples
+									.box-list-desc
+										div
+											.box-list_subtitle HISTORY & RELIGION
+											.box-list_title Temples
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="temple.html").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Shrines
+									.box-list-desc
+										div
+											.box-list_subtitle HISTORY & RELIGION
+											.box-list_title Shrines
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/teine.jpg", alt="")
+									.box-list_title-fixed Castles
+									.box-list-desc
+										div
+											.box-list_subtitle HISTORY & RELIGION
+											.box-list_title Castles
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/saporo.jpg", alt="")
+									.box-list_title-fixed World Heritage
+									.box-list-desc
+										div
+											.box-list_subtitle HISTORY & RELIGION
+											.box-list_title World Heritage
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More
+
+				section.section.section-box-tile(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center ART TRADITION & CULTURE
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Arts and Crafts
+									.box-list-desc
+										div
+											.box-list_subtitle ART TRADITION & CULTURE
+											.box-list_title Arts and Crafts
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Gardens
+									.box-list-desc
+										div
+											.box-list_subtitle ART TRADITION & CULTURE
+											.box-list_title Gardens
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Festivals
+									.box-list-desc
+										div
+											.box-list_subtitle ART TRADITION & CULTURE
+											.box-list_title Festivals
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Agriculture
+									.box-list-desc
+										div
+											.box-list_subtitle ART TRADITION & CULTURE
+											.box-list_title Agriculture
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="#").btn.btn-light Learn More
+
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

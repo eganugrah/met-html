@@ -1,0 +1,111 @@
+- var title = "East Japan - Maya Elite Tour"
+- var page = "level1page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-7.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-2.png" alt="")
+
+				section.section.section-welcome.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.row
+							.col-md-6
+								.block-page-title
+									h1.h1-medium
+										span EXPLORE 
+										span EAST 
+										span JAPAN
+							.col-md-6
+								ul.section-image
+									li(data-aos="fade-up" data-aos-delay="100" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-1.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="400" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-2.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="800" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-3.png" alt="")
+						
+						.section-content
+							div(data-aos="fade-up" data-aos-duration="1000")
+								h4.text-center.mb-4 REGION AND PREFECTURES
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Hokkaido
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Hokkaido
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Tohoku
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Tohoku
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/teine.jpg", alt="")
+									.box-list_title-fixed Kanto
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Kanto
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/saporo.jpg", alt="")
+									.box-list_title-fixed Chubu
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Chubu
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+
+				include ./component/section-home-recommended.pug
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

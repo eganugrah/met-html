@@ -1,0 +1,16 @@
+@import '/vendor/bootstrap/css/bootstrap.min.css', 
+		'/vendor/aos/aos.css', 
+		'/vendor/font-awesome-4.7.0/css/font-awesome.min.css',
+		'/vendor/slick/slick.css', 
+		'/vendor/slick/slick-theme.css', 
+		'/vendor/magnific-popup/magnific-popup.css'
+		;
+
+@import '_variable', 
+		'_font',
+		'_button', 
+		'_input', 
+		'_global', 
+		'_header', 
+		'_footer'
+		;

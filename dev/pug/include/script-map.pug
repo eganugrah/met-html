@@ -1,0 +1,169 @@
+script.
+	$(function(){
+		//- var hc = $(document).height()-44;
+		//- $('.map').css({'height':hc+'px'});
+		var markers = [
+			{latLng: [26, -95], link:"#m1", status:"pin", name:"Peristiwa di Nusa Tenggara Timur"},
+			{latLng: [26.8, -100.8], link:"#m2", status:"pin", name:"Peristiwa di Bali"},
+			{latLng: [32.5, -93.5], link:"#m3", status:"pin", name:"Peristiwa di Sulawesi Tenggara "},
+			{latLng: [27.8, -103.4], link:"#m4", status:"pin", name:"Peristiwa di Jawa Timur"},
+			{latLng: [28, -105.7], link:"#m5", status:"pin", name:"Peristiwa di Jawa Tengah"},
+			{latLng: [28, -108.4], link:"#m6", status:"pin", name:"Peristiwa di Jawa Barat"},
+
+			{latLng: [42, -122.4], link:"#m7", status:"pin", name:"Peristiwa di Aceh"},
+			{latLng: [39, -118.4], link:"#m8", status:"pin", name:"Peristiwa di Sumatra Utara"},
+			//{latLng: [37.5, -115], link:"#m9", status:"pin", name:"Peristiwa di Riau"},
+			{latLng: [36, -116], link:"#m10", status:"pin", name:"Peristiwa di Sumatra Barat"},
+			//{latLng: [34.5, -113.5], link:"#m11", status:"pin", name:"Peristiwa di Jambi"},
+			//{latLng: [32, -113.5], link:"#m12", status:"pin", name:"Peristiwa di Bengkulu"},
+			{latLng: [32, -112], link:"#m13", status:"pin", name:"Peristiwa di Sumatra Selatan"},
+			{latLng: [30.5, -110.5], link:"#m14", status:"pin", name:"Peristiwa di Lampung"},
+
+			{latLng: [29, -107.4], link:"#m15", status:"pin", name:"Peristiwa di DKI Jakarta"},
+			{latLng: [27, -104.8], link:"#m16", status:"pin", name:"Peristiwa di DI Yogyakarta"},
+			{latLng: [31, -95.6], link:"#m17", status:"pin", name:"Peristiwa di Sulawesi Selatan"},
+			{latLng: [33, -88.8], link:"#m18", status:"pin", name:"Peristiwa di Pulau Buru"},
+			{latLng: [31, -79], link:"#m19", status:"pin", name:"Peristiwa di Papua"},
+			{latLng: [25.8, -90], link:"#m20", status:"pin", name:"Peristiwa di Timor Timur"},
+		]
+		values1 = {'1': 'Region'};
+
+		var map = new jvm.Map({
+			container: $('.map'),
+			map: 'indonesia',
+			backgroundColor: '#FFF',
+			labels: {
+				regions: {
+					render: function(code){
+						var doNotShow = [
+							'JB-SumatraS1','JB-SumatraS2',
+							'JB-JawaS1','JB-JawaS2',
+							'JB-KalimantanS1','JB-KalimantanS2',
+							'JB-SulawesiS1','JB-SulawesiS2',
+							'JB-MalukuS1','JB-MalukuS2',
+							'JB-MalukuUtaraS1','JB-MalukuUtaraS2',
+							'JB-PapuaS1','JB-PapuaS2',
+							'JB-BaliS1','JB-BaliS2',
+							'JB-KepRiauS1','JB-KepRiauS2',
+							'JB-NTTS1','JB-NTTS2',
+							'JB-NTBS1','JB-NTBS2',
+							'JB-BangkaBelitungS1','JB-BangkaBelitungS2',
+						];
+						if (doNotShow.indexOf(code) === -1) {
+							return code.split('-')[1];
+						}
+					},
+					offsets: function(code){
+						return {
+							'Sumatra': [20, -10],
+							'Papua': [40, -20],
+							'Sulawesi': [-40, 0],
+						}[code.split('-')[1]];
+					}
+				},
+				markers: {
+					render: function(index){
+						//return 'Peristiwa '+index;
+						return ''
+					}
+				}
+			},
+			markers: markers,
+			series: {
+				markers: [{
+					attribute: 'image',
+					scale: {'pin': '/assets/img/pin-02.png'},
+					values: markers.reduce(function(p, c, i){ p[i] = c.status; return p }, {}),
+				}],
+				regions: [{
+					scale: { 
+						"Hijau": '#799D6D',
+						"Shadow1": '#406342',
+						"Shadow2": '#4F7754',
+						"other": '#594A42',
+					},
+					attribute: 'fill',
+					values: {
+						"JB-Sumatra": 'Hijau',
+						"JB-SumatraS1": 'Shadow1',
+						"JB-SumatraS2": 'Shadow2',
+	
+						"JB-KepRiau": 'Hijau',
+						"JB-KepRiauS1": 'Shadow1',
+						"JB-KepRiauS2": 'Shadow2',
+	
+						"JB-BangkaBelitung": 'Hijau',
+						"JB-BangkaBelitungS1": 'Shadow1',
+						"JB-BangkaBelitungS2": 'Shadow2',
+	
+						"JB-Jawa": 'Hijau',
+						"JB-JawaS1": 'Shadow1',
+						"JB-JawaS2": 'Shadow2',
+	
+						"JB-Kalimantan": 'Hijau',
+						"JB-KalimantanS1": 'Shadow1',
+						"JB-KalimantanS2": 'Shadow2',
+	
+						"JB-Sulawesi": 'Hijau',
+						"JB-SulawesiS1": 'Shadow1',
+						"JB-SulawesiS2": 'Shadow2',
+	
+						"JB-Bali": 'Hijau',
+						"JB-BaliS1": 'Shadow1',
+						"JB-BaliS2": 'Shadow2',
+	
+						"JB-Maluku": 'Hijau',
+						"JB-MalukuS1": 'Shadow1',
+						"JB-MalukuS2": 'Shadow2',
+	
+						"JB-MalukuUtara": 'Hijau',
+						"JB-MalukuUtaraS1": 'Shadow1',
+						"JB-MalukuUtaraS2": 'Shadow2',
+	
+						"JB-NTT": 'Hijau',
+						"JB-NTTS1": 'Shadow1',
+						"JB-NTTS2": 'Shadow2',
+	
+						"JB-NTB": 'Hijau',
+						"JB-NTBS1": 'Shadow1',
+						"JB-NTBS2": 'Shadow2',
+	
+						"JB-Papua": 'Hijau',
+						"JB-PapuaS1": 'Shadow1',
+						"JB-PapuaS2": 'Shadow2',
+
+						"JB-TimorTimur": 'Hijau',
+	
+						"JB-.": 'other',
+					}
+				}]
+			},
+			regionsSelectable: false,
+			markersSelectable: false,
+			markersSelectableOne: false,
+	
+			onMarkerTipShow: function(event, tip, index){tip.html(map.tip.html()+'');},
+			onMarkerClick: function(event, index){
+				if(markers[index].link == "#m1") {$('#m1').modal('open');}
+				if(markers[index].link == "#m2") {$('#m2').modal('open');}
+				if(markers[index].link == "#m3") {$('#m3').modal('open');}
+				if(markers[index].link == "#m4") {$('#m4').modal('open');}
+				if(markers[index].link == "#m5") {$('#m5').modal('open');}
+				if(markers[index].link == "#m6") {$('#m6').modal('open');}
+				if(markers[index].link == "#m7") {$('#m7').modal('open');}
+				if(markers[index].link == "#m8") {$('#m8').modal('open');}
+				if(markers[index].link == "#m9") {$('#m9').modal('open');}
+				if(markers[index].link == "#m10") {$('#m10').modal('open');}
+				if(markers[index].link == "#m11") {$('#m11').modal('open');}
+				if(markers[index].link == "#m12") {$('#m12').modal('open');}
+				if(markers[index].link == "#m13") {$('#m13').modal('open');}
+				if(markers[index].link == "#m14") {$('#m14').modal('open');}
+				if(markers[index].link == "#m15") {$('#m15').modal('open');}
+				if(markers[index].link == "#m16") {$('#m16').modal('open');}
+				if(markers[index].link == "#m17") {$('#m17').modal('open');}
+				if(markers[index].link == "#m18") {$('#m18').modal('open');}
+				if(markers[index].link == "#m19") {$('#m19').modal('open');}
+				if(markers[index].link == "#m20") {$('#m20').modal('open');}
+			},
+		});
+	});

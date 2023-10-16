@@ -1,0 +1,173 @@
+.btn {
+	font-family: $fontMontMed;
+	border: none;
+    border-radius: 0px;
+	&:not(.btn-lg) {
+		font-size: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	&.btn-lg {
+		font-size: 20px;
+	}
+
+	&:hover, &:focus, &:active {
+		border: none;
+		outline: none;
+	}
+
+	&.btn-primary {
+		background-color: $colorMain;
+		&:hover {
+			background-color: $colorMainDark;
+		}
+	}
+
+	&.btn-primary-invert {
+		font-family: $fontMontSemiBold;
+		color: $colorMain;
+		border: 2px solid $colorMain;
+		&:hover {
+			color: $colorMainLight;
+			border-color: $colorMainLight;
+		}
+	}
+
+	&.btn-secondary {
+		background-color: $buttonSecondary;
+		&:hover {
+			background-color: $buttonSecondaryDark;
+		}
+	}
+
+	&.btn-secondary-invert {
+		font-family: $fontMontSemiBold;
+		color: $buttonSecondary;
+		border: 2px solid $buttonSecondary;
+		&:hover {
+			color: $buttonSecondaryLight;
+			border-color: $buttonSecondaryLight;
+		}
+	}
+
+	&.btn-light {
+		background-color: $grayLight;
+		// border: 1px solid $grayLightDark;
+		color: $colorMain;
+		&:hover {
+			background-color: $grayLightDark;
+		}
+	}
+
+	&.btn-light-invert {
+		font-family: $fontMontSemiBold;
+		color: $colorGray;
+		border: 2px solid $grayLightDark;
+		&:hover {
+			color: $colorMain;
+			border-color: $colorMain;
+		}
+	}
+}
+
+.btn-icon-animated {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+	&__circle {
+		position: absolute;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		background-color: $colorMain;
+		border-radius: 40px;
+		transition: 0.45s;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 14px;
+		font-size: 16px;
+		color: white;
+		transform: translateY(-50%);
+		transition: 0.45s;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 11px;
+			right: 11px;
+			width: 0;
+			height: 2px;
+			background-color: #fff;
+			transition: 0.45s;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		right: 60px;
+		font-weight: 700;
+		font-size: 18px;
+		color: $colorText;
+		transition: 0.45s;
+	}
+
+	&:hover {
+		.btn-icon-animated__circle {
+			width: 100%;
+			background-color: $colorMain;
+		}
+		.btn-icon-animated__icon {
+			right: 24px;
+			text-align: right;
+			color: white;
+			&::before {
+				width: 13px;
+			}
+		}
+		.btn-icon-animated__text {
+			color: #fff;
+			right: 80px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.dropdown-menu .dropdown-toggle:after {
+		border-top: .3em solid transparent;
+	    border-right: 0;
+	    border-bottom: .3em solid transparent;
+	    border-left: .3em solid;
+	}
+	.dropdown-menu .dropdown-menu{
+		margin-left:0;
+		margin-right: 0;
+	}
+	.dropdown-menu li{
+		position: relative;
+	}
+	.nav-item .submenu{ 
+		display: none;
+		position: absolute;
+		left:100%;
+		top:-7px;
+	}
+	.nav-item .submenu-left{ 
+		right:100%;
+		left:auto;
+	}
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+}

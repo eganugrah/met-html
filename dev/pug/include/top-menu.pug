@@ -1,0 +1,55 @@
+.top-menu
+	.container-fluid
+		ul.top-menu__left 
+			li.dropdown 
+				a(href="tentang-kami-sejarah-amsi.html") Tentang Kami
+				i.fa.fa-chevron-down
+				.dropdown-content 
+					ul 
+						li 
+							a(href="tentang-kami-sejarah-amsi.html") Sejarah AMSI
+						li 
+							a(href="tentang-kami-visi-misi.html") Visi dan Misi
+						li 
+							a(href="tentang-kami-isu-strategis.html") Isu Strategis
+			li.dropdown 
+				a(href="tim-pengurus.html") Tim
+				i.fa.fa-chevron-down
+				.dropdown-content 
+					ul 
+						li 
+							a(href="tim-pengurus.html") Pengurus
+						li 
+							a(href="tim-staf.html") Staf
+			li 
+				a(href="anggota.html") Anggota
+			li 
+				a(href="agenda.html") Agenda
+			li.dropdown 
+				a(href="program.html") Program
+				i.fa.fa-chevron-down
+				.dropdown-content 
+					ul 
+						li 
+							a(href="program-berjalan.html") Program Berjalan
+						li 
+							a(href="program-sebelumnya.html") Program Sebelumnya
+		
+		ul.top-menu__right
+			li.dropdown 
+				a(href="javascript:;").change-lang ID
+					i.fa.fa-chevron-down
+				.dropdown-content 
+					ul 
+						li 
+							a(href="javascript:;") EN
+			li 
+				a(href="javascript:;").toggle-search
+					i.fa.fa-search
+				.toggle-search-container 
+					form(action="#") 
+						.input-group
+							input(type="text" placeholder="masukkan kata kunci dan tekan enter").form-control.input-search
+							.input-group-append
+								a(href="javascript:;").btn.clear-search
+									img(src="assets/img/icon-close.png", alt="")

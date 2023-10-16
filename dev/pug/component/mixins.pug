@@ -1,0 +1,113 @@
+mixin pageHeader(title, breadItems, last)
+	.page-header 
+		.container-fluid
+			.row 
+				.col-lg-4
+					h1= title
+				.col-lg-8
+					ol.breadcrumb
+						each item in breadItems
+							li.breadcrumb-item
+								a(href=item.link)= item.name
+
+						if last
+							li.breadcrumb-item
+								span.breadcrumb-link-current= last
+						else
+
+mixin tim(contents)
+	each item in contents
+		.grid-item 
+			.avatar.avatar-lg 
+				img(src=item.img, alt=name)
+			.tim-name=item.name
+			if item.title
+				.tim-title=item.title
+			if item.subtitle
+				.tim-subtitle=item.subtitle
+			ul.kontak-socmed.small.mt-2
+				li 
+					a(href="https://twitter.com" target="_blank")
+						i.fa.fa-twitter 
+				li 
+					a(href="https://linkedin.com" target="_blank")
+						i.fa.fa-linkedin 
+				li 
+					a(href="mailto:info@amsi.or.id")
+						i.fa.fa-envelope 
+
+mixin kabar(contents)
+	each item in contents
+		.col-lg-3.col-md-6
+			.card
+				.card-label.blue 
+					a(href=item.catLink)=item.cat
+				.card-image.square-ratio
+					a(href=item.link)
+						img(src=item.image).card-img-top
+				.card-body
+					h5.card-title 
+						a(href=item.link)=item.title
+					.card-date=item.date
+					.card-text=item.desc
+
+mixin dokumen(contents)
+	each item in contents
+		.col-lg-3.col-md-6
+			.card 
+				.card-label.blue 
+					a(href=item.catLink)=item.cat
+				.card-image.portrait-ratio
+					a(href=item.link)
+						img(src=item.image).card-img-top
+				.card-body
+					h5.card-title 
+						a(href=item.link)=item.title
+					.card-date=item.date
+
+mixin agenda(contents)
+	each item in contents
+		.col-lg-3.col-md-6
+			.card.card-agenda
+				.card-image.square-ratio
+					a(href=item.link)
+						img(src=item.image).card-img-top
+				.card-body
+					h5.card-title 
+						a(href=item.link)=item.title
+					.card-date=item.date
+					.card-text=item.desc
+
+mixin program(contents)
+	each item in contents
+		.col-lg-4.col-md-6
+			.card.card-program 
+				.card-top 
+					.card-image
+						a(href=item.link)
+							img(src=item.image).card-img-top
+					h5.card-title 
+						a(href=item.link)
+							span=item.title
+				.card-body
+					.list-info 
+						.list-key Periode
+						.list-value 29 Nov - 3 Des 2022
+					.list-info 
+						.list-key Pendonor
+						.list-value AIPTIS
+					.list-info 
+						.list-key Target
+						.list-value Target Sasaran
+					.list-info 
+						.list-key Anggaran
+						.list-value Rp 1,234,000,000
+
+mixin mitra(contents)
+	each item in contents
+		.col-lg-3.col-md-4.col-6.load-item
+			a(href=item.link target="_blank").card.card-mitra
+				.card-image.square-ratio
+					img(src=item.image).card-img-top
+				.card-body.py-2.px-2
+					h5.card-title=item.title
