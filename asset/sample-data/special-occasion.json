@@ -1,0 +1,30 @@
+[
+	{
+		"id": "1",
+		"name": "Wedding Anniversary"
+	},
+	{
+		"id": "2",
+		"name": "Honeymoon"
+	},
+	{
+		"id": "3",
+		"name": "Proposal Engagement"
+	},
+	{
+		"id": "4",
+		"name": "Mother Day"
+	},
+	{
+		"id": "5",
+		"name": "Father Day"
+	},
+	{
+		"id": "6",
+		"name": "Birthday Celebration"
+	},
+	{
+		"id": "7",
+		"name": "Wellness"
+	}
+]

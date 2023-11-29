@@ -1,0 +1,114 @@
+.form-reservation 
+	form(action="#" name="form-reservation")#formReservation
+
+			h5.mb-3 Reservation Details
+			.row 
+				.col-md-6
+					.form-group 
+						label Reservation Type 
+						select(name="" required).form-control#selectReservationType
+							option(value="0") Select Type
+							option(value="reservation") Reservation
+							option(value="special-occasion") Special Occasion
+				.col-md-6
+					.form-group 
+						label Trip Type 
+						select(name="" required disabled).form-control#selectTripType
+							option(value="") Select Reservation Type first 
+			.form-group 
+				label Where 
+				textarea(name="", cols="30", rows="10", placeholder="Where would you like to go and what activity do you want? Please describe to us").form-control
+
+			.row 
+				.col-md-5
+					.form-group 
+						label Accomodation Type
+						select(name="" required).form-control
+							option(value="") Select Accomodation Type
+							option(value="1") Roadways
+							option(value="2") Railways
+							option(value="3") Waterways
+							option(value="4") Airways
+				.col-md-7
+					.form-group 
+						label Duration  
+						input(type="text" name="datetimesDuration" required).form-control.datetimes-range
+			.row 
+				.col-md-4
+					.form-group
+						label Guest (Person)
+						input(type="number" required).form-control
+				.col-md-8
+					.form-group
+						label Range Budget / person (USD)
+						select(name="" required).form-control#selectBudget
+							option(value="0") Select Range
+							option(value="1") 500.00 - 999.00
+							option(value="2") 1,000.00 - 1,499.00
+							option(value="3") 1,500.00 - 1,999.00
+							option(value="4") 2,000.00 - 2,499.00
+							option(value="5") 2,500.00 - 2,999.00
+							option(value="6") > 3,000.00
+							option(value="other") Other
+				.col-md-12.bugdet-other.d-none 
+					.form-group 
+						label Please input your budget here 
+						input(type="text").form-control
+			hr
+			h5.mb-3 Contact Person
+			.form-group 
+				label Full Name
+				input(type="text" required).form-control
+			.row 
+				.col-md-6
+					.form-group 
+						label Email Address
+						input(type="email" required).form-control
+				.col-md-6
+					.form-group 
+						label Phone Number
+						input(type="text" required).form-control
+			.form-group.d-flex.justify-content-end.mt-5
+				button(type="submit").btn-icon-animated.block-mobile 
+					span.btn-icon-animated__circle
+						span.btn-icon-animated__icon
+							i.fa.fa-chevron-right
+					span.btn-icon-animated__text Send
+					
+
+script.
+	//- select on change for Reservation Type & Trip Type
+	var jsonDropdown;
+	let dropdownType = $('#selectReservationType');
+	dropdownType.change(function(){
+		var thisVal = this.value;
+		let dropdownTrip = $('#selectTripType');
+		dropdownTrip.empty();
+		dropdownTrip.append('<option selected="true" disabled>Select Trip Type</option>');
+		dropdownTrip.prop('selectedIndex', 0);
+		if(thisVal != '0') {
+			jsonDropdown = '/asset/sample-data/'+thisVal+'.json';
+			$.getJSON(jsonDropdown, function (data) {
+				$.each(data, function (key, entry) {
+					dropdownTrip.removeAttr('disabled');
+					dropdownTrip.append($('<option></option>').attr('value', entry.id).text(entry.name));
+				})
+			});
+		} else {
+			dropdownTrip.attr('disabled', true);
+			dropdownTrip.append('<option selected="true" disabled>Select Reservation Type first</option>');
+		}
+	});
+
+	//- select on change for Budget
+	let dropdownBudget = $('#selectBudget');
+	dropdownBudget.change(function(){
+		var thisVal = this.value;
+		if(thisVal == 'other') {
+			$('.bugdet-other').removeClass('d-none');
+			$('.bugdet-other').find('.form-control').attr('required', true);
+		} else {
+			$('.bugdet-other').addClass('d-none');
+			$('.bugdet-other').find('.form-control').removeAttr('required');
+		}
+	});

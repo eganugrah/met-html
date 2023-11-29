@@ -1,0 +1,42 @@
+[
+	{
+		"id": "1",
+		"name": "Tailor Made Trips"
+	},
+	{
+		"id": "2",
+		"name": "Package Tour - Daily Trip"
+	},
+	{
+		"id": "3",
+		"name": "Package Tour - Experiences"
+	},
+	{
+		"id": "4",
+		"name": "Package Tour - Half Day Tour"
+	},
+	{
+		"id": "5",
+		"name": "Package Tour - Multi Day Tour"
+	},
+	{
+		"id": "6",
+		"name": "Coorporate and Team Building - Coorporate Clients"
+	},
+	{
+		"id": "7",
+		"name": "Coorporate and Team Building - Integrating Team Building Activities"
+	},
+	{
+		"id": "8",
+		"name": "Coorporate and Team Building - Workshops"
+	},
+	{
+		"id": "9",
+		"name": "Coorporate and Team Building - Luxury Experiences"
+	},
+	{
+		"id": "10",
+		"name": "Coorporate and Team Building - Event And Converence Planning MICEs"
+	}
+]

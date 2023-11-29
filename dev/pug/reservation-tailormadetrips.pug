@@ -1,0 +1,90 @@
+- var title = "Tailor Made Trips - Reservation - Maya Elite Tour"
+- var page = "level2page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header.medium
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-2.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-2.png" alt="")
+
+				section.section.no-divider.pt-0(data-aos="fade-up" data-aos-duration="500")
+					.container
+						
+						.section-content
+							div(data-aos="fade-up" data-aos-duration="1000")
+								h3.text-center.mb-4 Tailor Made Trips
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+							.box-card
+								.row 
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-4.png")
+												img(src="asset/img/page-banner-4.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-5.png") 
+												img(src="asset/img/page-banner-5.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-6.png")
+												img(src="asset/img/page-banner-6.png", alt="")
+
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-4.png") 
+												img(src="asset/img/page-banner-4.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-5.png")
+												img(src="asset/img/page-banner-5.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-6.png") 
+												img(src="asset/img/page-banner-6.png", alt="")
+
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-4.png") 
+												img(src="asset/img/page-banner-4.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-5.png") 
+												img(src="asset/img/page-banner-5.png", alt="")
+									.col-lg-4.col-md-6 
+										.card.card-custom.with-hover 
+											a.card-image.image-popup(href="asset/img/page-banner-6.png") 
+												img(src="asset/img/page-banner-6.png", alt="")
+
+				section.section(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content 
+							.row 
+								.col-lg-4 
+									h3 Make Your Reservation
+									p.mt-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit
+
+								.col-lg-8 
+									include ./component/reservation-form.pug
+
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug
