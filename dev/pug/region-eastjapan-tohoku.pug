@@ -1,0 +1,255 @@
+- var title = "Tohoku - East Japan - Interest - Maya Elite Tour"
+- var page = "level2page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header.medium
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-4.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-4.png" alt="")
+
+				section.section.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content
+							div(data-aos="fade-up" data-aos-duration="1000")
+								h3.text-center.mb-4 TOHOKU AREA
+								p
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+									|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									|Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 
+									|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+				section.section.section-map.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						#map.map-area(data-region="tohoku" data-json="/asset/sample-data/map-data.json")
+						#x
+						#y
+						#customTip.custom-tip-map
+
+				section.section.py-0.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content
+							.area-slider
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Aomori
+											p
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|when an unknown printer took a galley of type and scrambled it 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Iwate
+											p
+												|Remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|when an unknown printer took a galley of type and scrambled it 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|Has been the industry's standard dummy text ever since the 1500s
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Miyagi
+											p
+												|When an unknown printer took a galley of type and scrambled it 
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Akita
+											p
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|when an unknown printer took a galley of type and scrambled it 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Yamagata
+											p
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|when an unknown printer took a galley of type and scrambled it 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s
+								div
+									.card.border-0
+										.card-image.card-gallery
+											a.image-popup(href="asset/img/teine.jpg")
+												img(src="/asset/img/teine.jpg" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-2.png")
+												img(src="/asset/img/image-tile-2.png" alt="")
+											a.image-popup(href="asset/img/image-tile-1.png")
+												img(src="/asset/img/image-tile-1.png" alt="")
+										.card-body
+											.card-subtitle East Japan
+											a(href="#").card-title Fukushima
+											p
+												|Has been the industry's standard dummy text ever since the 1500s, 
+												|Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|when an unknown printer took a galley of type and scrambled it 
+												|to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+												|remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+												|Has been the industry's standard dummy text ever since the 1500s
+
+				section.section.section-box-tile.pt-0.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Aomori
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Aomori
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Iwate
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Iwate
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/teine.jpg", alt="")
+									.box-list_title-fixed Miyagi
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Miyagi
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/saporo.jpg", alt="")
+									.box-list_title-fixed Akita
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Akita
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-2.png", alt="")
+									.box-list_title-fixed Yamagata
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Yamagata
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-tile-1.png", alt="")
+									.box-list_title-fixed Fukushima
+									.box-list-desc
+										div
+											.box-list_subtitle East Japan
+											.box-list_title Fukushima
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="region-eastjapan-tohoku.html").btn.btn-light Learn More
+
+				include ./component/section-home-recommended.pug
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug

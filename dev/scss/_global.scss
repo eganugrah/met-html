@@ -22,6 +22,14 @@ body {
 		display: none;
 	}
 }
+.container {
+	@media screen and (min-width: 1921px) {
+		// max-width: 1800px;
+	}
+}
+.container-fluid {
+	max-width: 1980px;
+}
 a {
 	position: relative;
 	transition: all .1s ease-in-out;
@@ -668,6 +676,338 @@ p {
 	}
 }
 
+.seasonal-slider {
+	margin-top: 60px;
+	height: 500px;
+	@media screen and (max-width: 767px) {
+		height: 360px;
+	}
+	.slick-slide {
+		height: 500px;
+		@media screen and (max-width: 767px) {
+			height: 360px;
+		}
+	}
+	.card {
+		margin: 0;
+		height: 100%;
+		background: none;
+		.card-image {
+			img {
+				width: 70%;
+				height: auto;
+				object-fit: cover;
+				@media screen and (max-width: 767px) {
+					width: 100%;
+					height: 300px;
+				}
+			}
+		}
+		.card-title {
+			font-size: 35px;
+			font-family: $fontMiller;
+			margin-bottom: 0;
+			margin-top: 30px;
+			line-height: 40px;
+			color: $colorMain;
+			display: block;
+			span {
+				font-size: 10px;
+			}
+			@media screen and (max-width: 767px) {
+				margin-top: 15px;
+			}
+		}
+
+		a.card-title{
+			&:hover {
+				text-decoration: none;
+				color: $colorMainLight;
+			}
+		}
+		.card-body {
+			background-color: white;
+			position: absolute;
+			top: 80px;
+			bottom: 80px;
+			right: 10px;
+			transition: all .2s ease-in-out;
+			width: 50%;
+			padding: 30px;
+			@media screen and (max-width: 767px) {
+				top: unset;
+				bottom: 0;
+				left: 10px;
+				right: 10px;
+				width: unset;
+				padding: 15px;
+
+				p {
+
+					line-height: 24px;
+					-webkit-line-clamp: 2;
+				}
+			}
+			p {
+				// font-size: 13px;
+				// line-height: 20px;
+				// margin-bottom: 0;
+			}
+		}
+		&:hover {
+			.card-body {
+				// transform: translateY(-10px);
+				box-shadow: 0px 5px 10px rgba(0,0,0,0.16);
+			}
+			
+			.card-subtitle {
+				&:after {
+					width: 60px;
+				}
+			}
+		}
+		.card-subtitle {
+			position: relative;
+			margin-bottom: 15px;
+			display: block;
+			color: $colorText;
+			font-style: italic;
+			&:after {
+				position: absolute;
+				content: '';
+				width: 30px;
+				height: 1px;
+				left: 0;
+				bottom: 0;
+				background-color: $colorText;
+				transition: all .3s ease-in-out;
+			}
+		}
+		p {
+			margin-top: 10px;
+			margin-bottom: 0;
+			display: -webkit-box;
+			max-width: 100%;
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			line-height: 30px;
+
+			@media screen and (max-width: 991px) {
+				-webkit-line-clamp: 3;
+			}
+		}
+		.card-button {
+			position: relative;
+			margin-top: 30px;
+		}
+	}
+	.slick-dots {
+		bottom: -50px;
+	}
+}
+
+.area-slider {
+	// margin-top: 60px;
+	height: 350px;
+	@media screen and (max-width: 767px) {
+		height: 400px;
+	}
+	.slick-slide {
+		height: 350px;
+		@media screen and (max-width: 767px) {
+			height:400px;
+		}
+	}
+	.slick-prev,
+	.slick-next {
+		z-index: 1;
+	}
+	.slick-prev {
+		left: 15px;
+	}
+	.slick-next {
+		right: 15px;
+	}
+	.card {
+		margin: 0;
+		height: 100%;
+		background: none;
+		.card-image:not(.card-gallery) {
+			img {
+				width: 70%;
+				height: auto;
+				object-fit: cover;
+				@media screen and (max-width: 767px) {
+					width: 100%;
+					height: 300px;
+				}
+			}
+		}
+		.card-gallery {
+			width: 50%;
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			box-sizing: border-box;
+			@media screen and (max-width: 767px) {
+				width: 100%;
+			}
+			@media screen and (max-width: 480px) {
+				height: 60%;
+			}
+			> div, > a {
+				display: block;
+				position: relative;
+				overflow: hidden;
+				width: 50%;
+				height: 50%;
+				flex-grow: 1;
+				box-sizing: border-box;
+				justify-content: space-between;
+				text-align: center;
+				@media screen and (max-width: 767px) {
+					width: 25%;
+					height: 60%;
+				}
+				@media screen and (max-width: 480px) {
+					width: 50%;
+					height: 50%;
+				}
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					-o-object-fit: cover;
+					object-fit: cover;
+					z-index: 0;
+				}
+			}
+			> a {
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+		.card-title {
+			font-size: 35px;
+			font-family: $fontMiller;
+			margin-bottom: 0;
+			margin-top: 30px;
+			line-height: 40px;
+			color: $colorMain;
+			display: block;
+			color: white;
+			span {
+				font-size: 10px;
+			}
+			@media screen and (max-width: 767px) {
+				margin-top: 15px;
+			}
+		}
+
+		a.card-title{
+			color: white;
+			&:hover {
+				color: white;
+				text-decoration: underline;
+			}
+		}
+		.card-body {
+			background-color: $colorGray;
+			color: white;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			transition: all .2s ease-in-out;
+			width: 50%;
+			padding: 30px;
+			@media screen and (max-width: 767px) {
+				top: unset;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: unset;
+				padding: 15px;
+
+				p {
+					line-height: 24px;
+					-webkit-line-clamp: 2;
+				}
+			}
+			p {
+				// font-size: 13px;
+				// line-height: 20px;
+				// margin-bottom: 0;
+			}
+		}
+		&:hover {
+			.card-body {
+				// transform: translateY(-10px);
+				box-shadow: 0px 5px 10px rgba(0,0,0,0.16);
+			}
+			
+			.card-subtitle {
+				&:after {
+					width: 60px;
+				}
+			}
+		}
+		.card-subtitle {
+			position: relative;
+			margin-bottom: 15px;
+			display: block;
+			color: white;
+			font-style: italic;
+			&:after {
+				position: absolute;
+				content: '';
+				width: 30px;
+				height: 1px;
+				left: 0;
+				bottom: 0;
+				background-color: white;
+				transition: all .3s ease-in-out;
+			}
+		}
+		p {
+			margin-top: 10px;
+			margin-bottom: 0;
+			display: -webkit-box;
+			max-width: 100%;
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			line-height: 30px;
+			color: white;
+
+			@media screen and (max-width: 991px) {
+				-webkit-line-clamp: 3;
+			}
+		}
+		.card-button {
+			position: relative;
+			margin-top: 30px;
+		}
+	}
+	.slick-dots {
+		bottom: -50px;
+	}
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	margin: 60px 0;
+	background-color: $colorMain;
+
+	@media screen and (max-width: 1199px) {
+		margin: 30px 0;
+	}
+}
 .block-page-title {
 	height: 100%;
     width: 100%;
@@ -704,6 +1044,9 @@ p {
 .slick-dots li.slick-active button:before {
 	color: $colorMain;
 	opacity: 1;
+}
+.slick-dots li button:before {
+	font-size: 14px;
 }
 .main-content {
 
@@ -840,6 +1183,7 @@ p {
 			color: white;
 			font-size: 30px;
 			transition: all .3s ease-in-out;
+			background: linear-gradient(0deg,rgb(0 0 0) -80%,rgba(255,255,255,0) 100%);
 		}
 		&-desc {
 			position: absolute;
@@ -1170,10 +1514,40 @@ p {
 	// min-height: 100vh;
 }
 
-#map {
+.map-area {
     width: 100%;
-    height: 600px;
+    // height: 600px;
+    height: 80vh;
 	position: relative;
+
+	@media screen and (max-width: 1024px) {
+		height: 80vh;
+	}
+}
+.jvectormap-legend-title {
+	margin-bottom: 5px;
+}
+.legend-title {
+	&.legend-title_east {
+		.jvectormap-legend-tick {
+			&:nth-child(5),
+			&:nth-child(6),
+			&:nth-child(7),
+			&:nth-child(8) {
+				display: none;
+			}
+		}
+	}
+	&.legend-title_west {
+		.jvectormap-legend-tick {
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+	}
 }
 
 .custom-tip-map {

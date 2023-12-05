@@ -1,0 +1,165 @@
+{
+	"japan": {
+		"JP-01": {
+			"name": "Hokkaido",
+			"url": "#",
+			"address": "Hokkaido 062-8517",
+			"area": "Hokkaido Area",
+			"region": "East Japan"
+		},
+		"JP-02": {
+			"name": "Aomori",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-03": {
+			"name": "Iwate",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-04": {
+			"name": "Miyagi",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-05": {
+			"name": "Akita",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-06": {
+			"name": "Yamagata",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-07": {
+			"name": "Fukushima",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Tohoku Area",
+			"region": "East Japan"
+		},
+		"JP-08": {
+			"name": "Ibaraki",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-09": {
+			"name": "Tochigi",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-10": {
+			"name": "Gunma",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-11": {
+			"name": "Saitama",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-12": {
+			"name": "Chiba",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-13": {
+			"name": "Tokyo",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-14": {
+			"name": "Kanagawa",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Kanto Area",
+			"region": "East Japan"
+		},
+		"JP-15": {
+			"name": "Nigata",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-16": {
+			"name": "Toyama",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-17": {
+			"name": "Ishikawa",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-18": {
+			"name": "Fukui",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-19": {
+			"name": "Yamanashi",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-20": {
+			"name": "Nagano",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-21": {
+			"name": "Gifu",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-22": {
+			"name": "Shizuoka",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		},
+		"JP-23": {
+			"name": "Aichi",
+			"url": "#",
+			"address": "Detail Address here...",
+			"area": "Chubu Area",
+			"region": "East Japan"
+		}
+	}
+}

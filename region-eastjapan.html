@@ -63,7 +63,7 @@
                                 <li><a class="dropdown-item" href="#">Chubu</a></li>
                               </ul>
                             </li>
-                            <li class="has-child"><a class="dropdown-item" href="#">West Japan</a>
+                            <li class="has-child"><a class="dropdown-item" href="region-westjapan.html">West Japan</a>
                               <ul class="submenu dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Kansai</a></li>
                                 <li><a class="dropdown-item" href="#">Chugoku</a></li>
@@ -329,6 +329,14 @@
             </div>
           </div>
         </section>
+        <section class="section section-map no-divider" data-aos="fade-up" data-aos-duration="500">
+          <div class="container">
+            <div class="map-area" id="map" data-region="east" data-json="/asset/sample-data/map-data.json"></div>
+            <div id="x"></div>
+            <div id="y"></div>
+            <div class="custom-tip-map" id="customTip"></div>
+          </div>
+        </section>
         <section class="section section-box-tile no-divider" data-aos="fade-up" data-aos-duration="500">
           <div class="container">
             <div class="section-content">
@@ -397,7 +405,7 @@
             </div>
           </div>
         </section>
-        <section class="section section-recommended" data-aos="fade-up" data-aos-duration="500">
+        <section class="section section-recommended container-fluid" data-aos="fade-up" data-aos-duration="500">
           <div class="container">
             <h3 class="text-center">MOST RECOMMENDED PLACES</h3>
           </div>
@@ -557,5 +565,6 @@
     <script type="text/javascript" src="/vendor/jquery-jvectormap-2.0.5/jquery-jvectormap-2.0.5.min.js"></script>
     <script type="text/javascript" src="/asset/map/japan.js"></script>
     <script type="text/javascript" src="/asset/js/main-min.js"></script>
+    <script type="text/javascript" src="/asset/js/map-min.js"></script>
   </body>
 </html>

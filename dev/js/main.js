@@ -162,24 +162,24 @@ if ($('.testimoni-slider').length) {
     infinite: false,
     arrows: false,
     speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 6,
+    slidesToScroll: 6,
     adaptiveHeight: true,
     //   centerPadding: '60px',
     //   centerMode: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1919,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
         },
       },
       {
-        breakpoint: 991,
+        breakpoint: 1025,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {
@@ -206,7 +206,7 @@ if ($('.slider-recommended').length) {
     //   centerMode: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -227,6 +227,36 @@ if ($('.slider-recommended').length) {
         },
       },
     ],
+  });
+}
+
+if ($('.seasonal-slider').length) {
+  $('.seasonal-slider').slick({
+    fade: true,
+    dots: true,
+    infinite: false,
+    arrows: false,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+}
+
+if ($('.area-slider').length) {
+  $('.area-slider').slick({
+    fade: true,
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    // autoplay: true,
+    autoplaySpeed: 3000,
   });
 }
 
@@ -293,227 +323,6 @@ $(function () {
       format: 'MMM D, YYYY H:mm',
     },
   });
-
-  if ($('#map').length) {
-    $.getJSON('/asset/sample-data/map-data.json', function (data) {
-      var map,
-        markerIndex = 0,
-        markersCoords = {};
-
-      map = new jvm.Map({
-        container: $('#map'),
-        map: 'japan',
-        zoomOnScroll: false,
-        // zoomMin: 1.2,
-        zoomStep: 1.2,
-        // focusOn: {
-        //   x: 0,
-        //   y: 0,
-        //   scale: 1.5,
-        // },
-        backgroundColor: 'transparent',
-        regionsSelectable: true,
-        regionsSelectableOne: true,
-        regionStyle: {
-          initial: {
-            fill: '#E3D8BF',
-            stroke: 'white',
-            'stroke-width': 1,
-            'stroke-opacity': 1,
-          },
-          hover: {
-            fill: '#A37E2C',
-            'fill-opacity': 1,
-            cursor: 'pointer',
-          },
-          selected: {
-            fill: '#A37E2C',
-          },
-        },
-        regionLabelStyle: {
-          initial: {
-            'font-family': 'montserrat-regular',
-            'font-size': '8',
-            'font-weight': 'normal',
-            fill: 'white',
-          },
-          hover: {
-            fill: 'white',
-          },
-          selected: {
-            fill: 'white',
-          },
-        },
-        labels: {
-          regions: {
-            render: function (code) {
-              var doNotShow = ['US-RI', 'US-DC', 'US-DE', 'US-MD'];
-
-              if (doNotShow.indexOf(code) === -1) {
-                return code.split('-')[1];
-              }
-            },
-            offsets: function (code) {
-              return {
-                '02': [0, 13],
-                '04': [0, -8],
-                '05': [3, 0],
-                '08': [0, 13],
-                15: [10, 0],
-                12: [-3, 0],
-                17: [-10, 20],
-                18: [5, -5],
-                22: [-10, 0],
-                27: [5, 0],
-                30: [-10, 0],
-                31: [-5, -5],
-                39: [5, -10],
-                43: [10, 0],
-                46: [0, -10],
-              }[code.split('-')[1]];
-            },
-          },
-        },
-        series: {
-          regions: [
-            {
-              scale: {
-                Hokkaido: '#e3136e',
-                Tohoku: '#79af30',
-                Kanto: '#9cc5e9',
-                Chubu: '#de3539',
-                Kansai: '#f7b233',
-                Chugoku: '#79af30',
-                Shikoku: '#8a002b',
-                Kyushu: '#04a9d2',
-              },
-              attribute: 'fill',
-              values: {
-                'JP-01': 'Hokkaido',
-                'JP-02': 'Tohoku',
-                'JP-03': 'Tohoku',
-                'JP-04': 'Tohoku',
-                'JP-05': 'Tohoku',
-                'JP-06': 'Tohoku',
-                'JP-07': 'Tohoku',
-                'JP-08': 'Kanto',
-                'JP-09': 'Kanto',
-                'JP-10': 'Kanto',
-                'JP-11': 'Kanto',
-                'JP-12': 'Kanto',
-                'JP-13': 'Kanto',
-                'JP-14': 'Kanto',
-                'JP-15': 'Chubu',
-                'JP-16': 'Chubu',
-                'JP-17': 'Chubu',
-                'JP-18': 'Chubu',
-                'JP-19': 'Chubu',
-                'JP-20': 'Chubu',
-                'JP-21': 'Chubu',
-                'JP-22': 'Chubu',
-                'JP-23': 'Chubu',
-                'JP-24': 'Kansai',
-                'JP-25': 'Kansai',
-                'JP-26': 'Kansai',
-                'JP-27': 'Kansai',
-                'JP-28': 'Kansai',
-                'JP-29': 'Kansai',
-                'JP-30': 'Kansai',
-                'JP-31': 'Chugoku',
-                'JP-32': 'Chugoku',
-                'JP-33': 'Chugoku',
-                'JP-34': 'Chugoku',
-                'JP-35': 'Chugoku',
-                'JP-36': 'Shikoku',
-                'JP-37': 'Shikoku',
-                'JP-38': 'Shikoku',
-                'JP-39': 'Shikoku',
-                'JP-40': 'Kyushu',
-                'JP-41': 'Kyushu',
-                'JP-42': 'Kyushu',
-                'JP-43': 'Kyushu',
-                'JP-44': 'Kyushu',
-                'JP-45': 'Kyushu',
-                'JP-46': 'Kyushu',
-                'JP-47': 'Kyushu',
-              },
-              legend: {
-                vertical: true,
-                title: 'Area',
-              },
-            },
-          ],
-        },
-        onRegionClick: function (e, code) {
-          var map = $('#map').vectorMap('get', 'mapObject');
-          var customTip = $('#customTip');
-          if (typeof data.japan[code] != 'undefined') {
-            customTip.html('');
-            customTip.show();
-            customTip.append(
-              '<div class="map-info">' +
-                '<div class="map-info-title">' +
-                map.tip.text() +
-                '</div>' +
-                '<div>' +
-                data.japan[code]['area'] +
-                '</div>' +
-                '<div>' +
-                data.japan[code]['address'] +
-                ', ' +
-                data.japan[code]['region'] +
-                '</div>' +
-                //   '<div class="map-info-footer">' +
-                '<a href="' +
-                data.japan[code]['url'] +
-                '" class="btn btn-block btn-light mt-3">See Details</a>' +
-                //   '</div>' +
-                '<div class="map-info-close"><i class="fa fa-close"></i></div>' +
-                '</div>',
-            );
-            customTip.find('.map-info-close').click(function () {
-              map.clearSelectedRegions();
-              customTip.hide();
-            });
-            var tipHeight = customTip.innerHeight();
-            var tipWidth = customTip.innerWidth();
-            customTip.css({
-              left: getLeft - map.container.offset().left - tipWidth / 2 + 10,
-              top: getTop - map.container.offset().top - tipHeight / 2,
-            });
-            //   console.log(getLeft - map.container.offset().left);
-          } else {
-            map.clearSelectedRegions();
-            customTip.hide();
-            console.log('data tidak ditemukan');
-          }
-        },
-        onRegionTipShow: function (e, tip, code) {
-          if (!bpDesktop) {
-            e.preventDefault();
-          }
-        },
-      });
-
-      var getLeft, getTop, addOffsetX, addOffsetY;
-      $('#map')
-        .vectorMap('get', 'mapObject')
-        .container.mousemove(function (e) {
-          //   var parentOffset = $(this).parent().offset();
-          //   getLeft = e.pageX - 182;
-          //   getTop = e.pageY - 1050;
-          if (!bpDesktop) {
-            addOffsetX = 0;
-            addOffsetY = 240;
-          } else {
-            addOffsetX = 0;
-            addOffsetY = 100;
-          }
-          getLeft = e.pageX;
-          getTop = e.pageY - addOffsetY;
-        });
-    });
-  }
 });
 
 function stickyHeaderDesktop() {
