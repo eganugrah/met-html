@@ -397,19 +397,50 @@
                         <textarea class="form-control" name="" cols="30" rows="10" placeholder="Where would you like to go and what activity do you want? Please describe to us"></textarea>
                       </div>
                       <div class="row"> 
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                           <div class="form-group"> 
-                            <label>Accomodation Type</label>
+                            <label>Accomodation</label>
                             <select class="form-control" name="" required="required">
-                              <option value="">Select Accomodation Type</option>
-                              <option value="1">Roadways</option>
-                              <option value="2">Railways</option>
-                              <option value="3">Waterways</option>
-                              <option value="4">Airways</option>
+                              <option value="">Select Accomodation</option>
+                              <option value="1">Hotel</option>
+                              <option value="2">Apartment</option>
+                              <option value="3">Villa</option>
+                              <option value="4">Glamping </option>
+                              <option value="999">Give me a suggesiton </option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-6">
+                          <div class="form-group"> 
+                            <label>Transportation</label>
+                            <select class="form-control" name="" required="required">
+                              <option value="">Select Transportation</option>
+                              <optgroup label="Roadways">
+                                <option value="1">Car</option>
+                                <option value="2">Bus</option>
+                                <option value="3">Taxi</option>
+                              </optgroup>
+                              <optgroup label="Railways">
+                                <option value="4">Bullet Train</option>
+                                <option value="5">Shinkansen Train</option>
+                                <option value="6">Character Train</option>
+                                <option value="7">Seasonal Train </option>
+                              </optgroup>
+                              <optgroup label="Waterways">
+                                <option value="8">Ferry</option>
+                                <option value="9">Boat</option>
+                              </optgroup>
+                              <optgroup label="Airways">
+                                <option value="10">Helicopter</option>
+                                <option value="11">Aeroplanes</option>
+                              </optgroup>
+                              <option value="999">Give me a suggesiton </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row"> 
+                        <div class="col-md-12">
                           <div class="form-group"> 
                             <label>Duration  </label>
                             <input class="form-control datetimes-range" type="text" name="datetimesDuration" required="required"/>

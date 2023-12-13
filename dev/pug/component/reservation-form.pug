@@ -20,16 +20,39 @@
 				textarea(name="", cols="30", rows="10", placeholder="Where would you like to go and what activity do you want? Please describe to us").form-control
 
 			.row 
-				.col-md-5
+				.col-md-6
 					.form-group 
-						label Accomodation Type
+						label Accomodation
 						select(name="" required).form-control
-							option(value="") Select Accomodation Type
-							option(value="1") Roadways
-							option(value="2") Railways
-							option(value="3") Waterways
-							option(value="4") Airways
-				.col-md-7
+							option(value="") Select Accomodation
+							option(value="1") Hotel
+							option(value="2") Apartment
+							option(value="3") Villa
+							option(value="4") Glamping 
+							option(value="999") Give me a suggesiton 
+				.col-md-6
+					.form-group 
+						label Transportation
+						select(name="" required).form-control
+							option(value="") Select Transportation
+							optgroup(label="Roadways")
+								option(value="1") Car
+								option(value="2") Bus
+								option(value="3") Taxi
+							optgroup(label="Railways")
+								option(value="4") Bullet Train
+								option(value="5") Shinkansen Train
+								option(value="6") Character Train
+								option(value="7") Seasonal Train 
+							optgroup(label="Waterways")
+								option(value="8") Ferry
+								option(value="9") Boat
+							optgroup(label="Airways")
+								option(value="10") Helicopter
+								option(value="11") Aeroplanes
+							option(value="999") Give me a suggesiton 
+			.row 
+				.col-md-12
 					.form-group 
 						label Duration  
 						input(type="text" name="datetimesDuration" required).form-control.datetimes-range
