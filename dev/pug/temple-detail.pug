@@ -60,6 +60,12 @@ html(lang="en")
 									a.grid-image.image-popup(href="asset/img/page-banner-2.png")
 										img(src="asset/img/page-banner-2.png", alt="")
 
+				section.section.section-map.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						#map.map-area(data-region="tohoku" data-selected="JP-07" data-json="/asset/sample-data/map-data.json")
+						#x
+						#y
+						#customTip.custom-tip-map
 
 				include ./component/section-home-faq.pug
 				include ./component/section-home-cta.pug

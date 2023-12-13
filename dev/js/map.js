@@ -1,6 +1,15 @@
+$.fn.hasAttr = function (name) {
+  if (typeof this.attr(name) !== 'undefined' || this.attr(name) !== '') {
+    return this.attr(name);
+  } else {
+    return false;
+  }
+};
+
 if ($('#map').length) {
   var getRegion = $('#map').data('region'),
-    getJsonFile = $('#map').data('json');
+    getJsonFile = $('#map').data('json'),
+    getSelectedAreaCode = $('#map').hasAttr('data-selected');
   var mapEast,
     mapWest,
     mapAll,
@@ -26,7 +35,20 @@ if ($('#map').length) {
   $.getJSON(getJsonFile, function (data) {
     var map,
       markerIndex = 0,
-      markersCoords = {};
+      markersCoords = {},
+      selectableStat,
+      setHover;
+    if (getSelectedAreaCode) {
+      selectableStat = false;
+      setHover = false;
+    } else {
+      selectableStat = true;
+      setHover = {
+        fill: '#A37E2C',
+        'fill-opacity': 1,
+        cursor: 'pointer',
+      };
+    }
 
     map = new jvm.Map({
       container: $('#map'),
@@ -37,8 +59,8 @@ if ($('#map').length) {
       zoomMax: 5,
       zoomStep: 1.2,
       backgroundColor: 'transparent',
-      regionsSelectable: true,
-      regionsSelectableOne: true,
+      regionsSelectable: selectableStat,
+      regionsSelectableOne: selectableStat,
       regionStyle: {
         initial: {
           fill: '#E3D8BF',
@@ -46,11 +68,7 @@ if ($('#map').length) {
           'stroke-width': 1,
           'stroke-opacity': 1,
         },
-        hover: {
-          fill: '#A37E2C',
-          'fill-opacity': 1,
-          cursor: 'pointer',
-        },
+        hover: setHover,
         selected: {
           fill: '#A37E2C',
         },
@@ -159,7 +177,7 @@ if ($('#map').length) {
           },
         ],
       },
-      onRegionClick: function (e, code) {
+      onRegionSelected: function (e, code) {
         var map = $('#map').vectorMap('get', 'mapObject');
         var customTip = $('#customTip');
         if (typeof data.japan[code] != 'undefined') {
@@ -168,7 +186,7 @@ if ($('#map').length) {
           customTip.append(
             '<div class="map-info">' +
               '<div class="map-info-title">' +
-              map.tip.text() +
+              data.japan[code]['name'] +
               '</div>' +
               '<div>' +
               data.japan[code]['area'] +
@@ -181,7 +199,7 @@ if ($('#map').length) {
               //   '<div class="map-info-footer">' +
               '<a href="' +
               data.japan[code]['url'] +
-              '" class="btn btn-block btn-light mt-3">See Details</a>' +
+              '" class="btn btn-block btn-light mt-3 btn-detail-tip">See Details</a>' +
               //   '</div>' +
               '<div class="map-info-close"><i class="fa fa-close"></i></div>' +
               '</div>',
@@ -191,12 +209,27 @@ if ($('#map').length) {
             map.clearSelectedRegions();
             customTip.hide();
           });
-          var tipHeight = customTip.innerHeight();
-          var tipWidth = customTip.innerWidth();
-          customTip.css({
-            left: getLeft - map.container.offset().left - tipWidth / 2 + 10,
-            top: getTop - map.container.offset().top - tipHeight / 2,
-          });
+          var tipsPosition,
+            tipHeight = customTip.innerHeight(),
+            tipWidth = customTip.innerWidth();
+
+          if (getSelectedAreaCode) {
+            customTip.addClass('tip-selected');
+            tipsPosition = {
+              left: 0, //'calc(50% - 125px)',
+              right: 0,
+              top: 0, //'calc(50% - 100px)',
+              //   bottom: 0,
+            };
+            $('.map-info-close').hide();
+          } else {
+            tipsPosition = {
+              left: getLeft - map.container.offset().left - tipWidth / 2 + 10,
+              top: getTop - map.container.offset().top - tipHeight / 2,
+            };
+          }
+
+          customTip.css(tipsPosition);
           //   console.log(getLeft - map.container.offset().left);
         } else {
           map.clearSelectedRegions();
@@ -204,6 +237,9 @@ if ($('#map').length) {
           console.log('data tidak ditemukan');
         }
       },
+      //   onRegionSelected: function (e, code) {
+      //     console.log(code);
+      //   },
       onRegionTipShow: function (e, tip, code) {
         if (!bpDesktop) {
           e.preventDefault();
@@ -212,19 +248,23 @@ if ($('#map').length) {
     });
 
     var mapObj = $('#map').vectorMap('get', 'mapObject');
-    if (!mapAll) {
+
+    if (getSelectedAreaCode) {
+      mapObj.setSelectedRegions(getSelectedAreaCode);
+      mapObj.setFocus({
+        region: getSelectedAreaCode,
+        animate: true,
+        x: -100,
+      });
+    } else if (!mapAll) {
       mapObj.setFocus({
         regions: arrayCode,
         animate: true,
       });
     }
-    //   mapObj.setFocus({ region: 'IN' });
 
     var getLeft, getTop, addOffsetX, addOffsetY;
     mapObj.container.mousemove(function (e) {
-      //   var parentOffset = $(this).parent().offset();
-      //   getLeft = e.pageX - 182;
-      //   getTop = e.pageY - 1050;
       if (!bpDesktop) {
         addOffsetX = 0;
         addOffsetY = 240;

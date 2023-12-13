@@ -1559,24 +1559,28 @@ p {
     padding: 15px 20px;
 	width: 250px;
 	@media screen and (max-width: 1050px) {
-		transform: translateY(calc(100% - 50px));
+		&:not(.tip-selected) {
+			transform: translateY(calc(100% - 50px));
+		}
 	}
 	@media screen and (max-width: 766px) {
-		transform: translateY(100%);
-		// top: 0!important;
-		left: 0!important;
-		right: 0;
-		// width: auto;
+		&:not(.tip-selected) {
+			transform: translateY(100%);
+			// top: 0!important;
+			left: 0!important;
+			right: 0;
+			bottom: unset!important;
+			// width: auto;
 
-		&::after {
-			display: none;
+			&::after {
+				display: none;
+			}
 		}
 	}
 	p {
 		margin-bottom: 0;
 		line-height: unset;
 	}
-
 	&::after {
 		position: absolute;
 		content: '';
@@ -1586,6 +1590,29 @@ p {
 		height: 10px;
 		background-color: #7C786E;
 		transform: rotate(45deg);
+	}
+	&.tip-selected {
+		&::after {
+			height: 1px;
+			width: 130%;
+			right: 0;
+			left: 100%;
+			transform: none;
+			bottom: 50%;
+			display: none;
+		}
+
+		.map-info {
+			.btn-detail-tip {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 766px) {
+			bottom: unset!important;
+			&::after {
+				display: none;
+			}
+		}
 	}
 }
 
