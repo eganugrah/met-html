@@ -1,0 +1,208 @@
+- var title = "Transportation - Maya Elite Tour"
+- var page = "level1page"
+include ./component/mixins.pug
+
+doctype html 
+html(lang="en")
+	head 
+		include ./include/head.pug
+	body 
+		.wrapper
+			include ./include/header.pug
+
+			#mainContent
+				section.section.section-page-header
+					.img-bg.parallax-item(style="background-image: url(asset/img/page-banner-8.png);")
+					//- .img-bg
+					//- 	img(src="asset/img/page-banner-2.png" alt="")
+
+				section.section.section-welcome.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						.row
+							.col-md-6
+								.block-page-title
+									h1.h1-medium
+										span EXPLORE 
+										span TRANSPORTATION
+							.col-md-6
+								ul.section-image
+									li(data-aos="fade-up" data-aos-delay="100" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-1.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="400" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-2.png" alt="")
+									li(data-aos="fade-up" data-aos-delay="800" data-aos-duration="500")
+										img(src="/asset/img/image-welcome-3.png" alt="")
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center ROADWAYS
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-car.png", alt="")
+									.box-list_title-fixed Luxury Car
+									.box-list-desc
+										div
+											.box-list_subtitle ROADWAYS
+											.box-list_title Luxury Car
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-bus.png", alt="")
+									.box-list_title-fixed Bus
+									.box-list-desc
+										div
+											.box-list_subtitle ROADWAYS
+											.box-list_title Bus
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-taxi.png", alt="")
+									.box-list_title-fixed Taxi
+									.box-list-desc
+										div
+											.box-list_subtitle ROADWAYS
+											.box-list_title Taxi
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center RAILWAYS
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-bullet-train.png", alt="")
+									.box-list_title-fixed Bullet Train
+									.box-list-desc
+										div
+											.box-list_subtitle RAILWAYS
+											.box-list_title Bullet Train
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-shinkansen-train.png", alt="")
+									.box-list_title-fixed Shinkansen Train
+									.box-list-desc
+										div
+											.box-list_subtitle RAILWAYS
+											.box-list_title Shinkansen Train
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-character-train.png", alt="")
+									.box-list_title-fixed Character Train
+									.box-list-desc
+										div
+											.box-list_subtitle RAILWAYS
+											.box-list_title Character Train
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More  
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-seasonal-train.png", alt="")
+									.box-list_title-fixed Seasonal Train
+									.box-list-desc
+										div
+											.box-list_subtitle RAILWAYS
+											.box-list_title Seasonal Train
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center WATERWAYS
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-ferry.png", alt="")
+									.box-list_title-fixed Ferry
+									.box-list-desc
+										div
+											.box-list_subtitle WATERWAYS
+											.box-list_title Ferry
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-boat.png", alt="")
+									.box-list_title-fixed Boat
+									.box-list-desc
+										div
+											.box-list_subtitle WATERWAYS
+											.box-list_title Boat
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+
+				section.section.section-box-tile.no-divider(data-aos="fade-up" data-aos-duration="500")
+					.container
+						h3.text-center AIRWAYS
+						.section-content
+							.box-layout 
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-helicopter.png", alt="")
+									.box-list_title-fixed Helicopter
+									.box-list-desc
+										div
+											.box-list_subtitle AIRWAYS
+											.box-list_title Helicopter
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+								.box-list
+									.box-list_image 
+										img(src="/asset/img/image-aeroplanes.png", alt="")
+									.box-list_title-fixed Aeroplanes
+									.box-list-desc
+										div
+											.box-list_subtitle AIRWAYS
+											.box-list_title Aeroplanes
+											.box-list_p 
+												|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+												|Quasi nemo explicabo nam sunt dolorum cumque quis? Ut impedit, soluta id, suscipit dolorum deserunt tempora praesentium quos hic aliquid rem officia.
+											.box-list_button 
+												a(href="transportation-detail.html").btn.btn-light Learn More
+
+				include ./component/section-home-faq.pug
+				include ./component/section-home-cta.pug
+
+		include ./include/footer.pug
+		include ./component/menu-mobile.pug
+		include ./include/script.pug
